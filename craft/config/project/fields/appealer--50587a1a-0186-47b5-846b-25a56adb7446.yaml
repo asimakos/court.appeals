@@ -1,0 +1,18 @@
+contentColumnType: string(800)
+fieldGroup: 78fc08b7-81dd-47d8-873a-3600a2c65e38
+handle: appealer
+instructions: 'Παρακαλώ εισάγετε το όνομα του προσφεύγοντος'
+name: Appealer
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 200
+  code: ''
+  columnType: null
+  initialRows: '4'
+  multiline: ''
+  placeholder: 'Εισαγωγή ονόματος προσφεύγοντος'
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

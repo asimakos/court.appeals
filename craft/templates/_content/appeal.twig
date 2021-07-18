@@ -1,0 +1,52 @@
+
+{% extends "_layout" %}
+
+{% block content %}
+
+	<br>
+		<div class="container-fluid">
+
+			<div class="row">
+				<div class="col">
+					<div class="card">
+				      <h4> ΓΑΚ: {{entry.title}} &nbsp;&nbsp; ΕΣΗΔΗΣ - ΠΡΟΚΗΡΥΞΗ: {{entry.tender}}  </h4>
+				      <h6> Προσφεύγων: {{entry.appealer | upper}} &nbsp; &nbsp;&nbsp; Αναθέτουσα αρχή: {{entry.assigner | upper}}</h6>
+			          <h7> <b> Αριθμός απόφασης: </b> {{entry.judgement}} </h7>
+				      <br>
+				      <b>Συνοπτική Περιγραφή Διακήρυξης:</b>
+				      <p>{{entry.description}}</p>
+
+				      {% if  entry.archives %}
+					      {% set files = entry.archives %}
+					      <p> <b> Έγγραφα υπόθεσης: </b> 
+					      {% for registry in files %}
+					      {{loop.index}}. <a href="{{registry.filename}}"> {{registry.title}} </a>	&nbsp;&nbsp; 
+					      {% endfor %}
+					      </p>
+				      {% endif %}
+				      
+				      {% if  entry.rank %}
+					      {% set rankings = entry.rank %}
+					      <p> <b> Κατηγορία Προσφυγής: </b>
+					      {% for ranking in rankings %}
+	                         {{ranking}} &nbsp;&nbsp; 
+					      {% endfor %}
+					      </p>
+				      {% endif %}
+
+				      {% if  entry.taxonomy %}
+					      {% set ratings = entry.taxonomy %}
+					      <p>	<b> Tags: </b>
+					      {% for rate in ratings %}
+		                       <a href="{{ siteUrl }}tags/{{ rate.slug | upper }}">{{ rate.title }}</a> &nbsp;&nbsp;
+					      {% endfor %}
+					      </p>
+				      {% endif %}
+				      
+				    </div>
+			    </div>
+			</div>
+
+        </div>
+
+{% endblock %}

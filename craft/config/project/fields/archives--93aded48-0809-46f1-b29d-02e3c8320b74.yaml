@@ -1,0 +1,30 @@
+contentColumnType: string
+fieldGroup: 78fc08b7-81dd-47d8-873a-3600a2c65e38
+handle: archives
+instructions: 'Παρακαλώ επιλέξτε τα έγγραφα της συγκεκριμένης υπόθεσης'
+name: Archives
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowedKinds: null
+  defaultUploadLocationSource: 'volume:bcc1b666-c736-483f-9736-5a09c7a24204'
+  defaultUploadLocationSubpath: ''
+  limit: ''
+  localizeRelations: false
+  restrictFiles: ''
+  selectionLabel: ''
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  singleUploadLocationSource: 'volume:bcc1b666-c736-483f-9736-5a09c7a24204'
+  singleUploadLocationSubpath: ''
+  source: null
+  sources:
+    - 'volume:bcc1b666-c736-483f-9736-5a09c7a24204'
+  targetSiteId: null
+  useSingleFolder: false
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

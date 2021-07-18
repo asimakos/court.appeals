@@ -1,0 +1,17 @@
+contentColumnType: integer(10)
+fieldGroup: 78fc08b7-81dd-47d8-873a-3600a2c65e38
+handle: postsperpage
+instructions: 'Παρακαλώ εισάγετε τον μέγιστο αριθμό δημοσιεύσεων ανά σελίδα'
+name: Postsperpage
+searchable: false
+settings:
+  decimals: 0
+  defaultValue: null
+  max: null
+  min: '0'
+  prefix: ''
+  size: null
+  suffix: ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Number

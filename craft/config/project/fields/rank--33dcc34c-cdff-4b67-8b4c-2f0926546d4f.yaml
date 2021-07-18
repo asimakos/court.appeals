@@ -1,0 +1,23 @@
+contentColumnType: string
+fieldGroup: 78fc08b7-81dd-47d8-873a-3600a2c65e38
+handle: rank
+instructions: 'Παρακαλώ επιλέξτε την κατάσταση της προσφυγής για ταξινόμηση'
+name: Rank
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  branchLimit: '1'
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: 'group:39cd361d-03c1-4652-9913-60b5a22bc020'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Categories

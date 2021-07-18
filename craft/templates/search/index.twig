@@ -1,0 +1,29 @@
+
+{% extends "_layout" %}
+
+{% block content %}
+
+	<br>
+
+	<div class="container">
+
+			<div class="row">
+				<div class="col">
+					<div class="card">
+
+						<form class="input-group rounded" action="{{ url('search/results') }}">
+							  <input type="search" name="q" class="form-control rounded" placeholder="Search" aria-label="Search"
+                              aria-describedby="search-addon" />
+							  <button type="submit" class="input-group-text border-0" id="search-addon"><i class="fas fa-search"></i></button>
+						</form>
+
+
+				    </div>
+			    </div>
+			</div>
+
+        </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+
+{% extends "_layout" %}
+
+{% block content %}
+
+	<br>
+	<div class="container-fluid">
+	   <div class="row">
+		<div class="col">
+			<div class="card">
+		      
+		      <h5>Κατάλογος Προδικαστικών Προσφυγών </h5>
+		     
+		      <p><b>με συνημμένα έγγραφα </b> που κατέληξαν σε δικαστήρια και έγιναν</p>
+		      
+		      <p>
+
+					{% for result in craft.categories().group('appealtype').all() %}
+
+					        {% if result.title == 'Δεκτή' %}
+
+					             {% set item='Δεκτές' %}
+					             {% set style_item='success' %}
+					             {% set style_symbol='check' %}
+
+					        {% elseif result.title == 'Απορριπτέα' %}
+
+					             {% set item='Μη Δεκτές' %}
+					             {% set style_item='danger' %}
+					             {% set style_symbol='times' %}
+
+					        {% endif %}
+
+					        <a href="{{result.url}}" class="btn btn-{{style_item}}" role="button"> <i class="fas fa-{{style_symbol}}-circle"></i> {{ item }} </a> &nbsp;
+
+					 {% endfor %}    </p>
+
+		    </div>
+	    </div>
+	  </div>
+	</div>
+
+{% endblock %}

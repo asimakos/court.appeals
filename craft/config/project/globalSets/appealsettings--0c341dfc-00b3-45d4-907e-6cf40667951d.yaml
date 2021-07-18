@@ -1,0 +1,31 @@
+fieldLayouts:
+  efcea069-8d5e-4419-8d28-c2c974fc22dd:
+    tabs:
+      -
+        elements:
+          -
+            fieldUid: ab378abf-a4ee-437a-bfeb-80272e36f7ab
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Αριθμός δημοσιεύσεων στην σελίδα'
+        sortOrder: 1
+      -
+        elements:
+          -
+            fieldUid: d42a0aff-7ce7-4dce-9a5e-05adc3060cac
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            warning: null
+            width: 100
+        name: 'Αριθμός δημοσιεύσεων στην σελίδα αναζήτησης'
+        sortOrder: 2
+handle: appealsettings
+name: AppealSettings

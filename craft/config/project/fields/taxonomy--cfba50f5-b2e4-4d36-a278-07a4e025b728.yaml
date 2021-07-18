@@ -1,0 +1,22 @@
+contentColumnType: string
+fieldGroup: 78fc08b7-81dd-47d8-873a-3600a2c65e38
+handle: taxonomy
+instructions: 'Παρακαλώ εισάγετε το όνομα της αναθέτουσας αρχής για ταξινόμηση'
+name: Taxonomy
+searchable: false
+settings:
+  allowLimit: false
+  allowMultipleSources: false
+  allowSelfRelations: false
+  limit: null
+  localizeRelations: false
+  selectionLabel: ''
+  showSiteMenu: true
+  source: 'taggroup:8f3e70b9-5b11-4456-a125-6fbeb12b1b40'
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Tags

@@ -1,0 +1,44 @@
+
+{#
+ # Layout template
+ # ---------------
+ #
+ # This template defines your site’s global layout. It can be
+ # “extended” by other templates to fill in the gaps.
+ #
+ # See Twig’s Template Inheritance documentation for more details:
+ # http://twig.sensiolabs.org/doc/templates.html#template-inheritance
+ #}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US">
+<head>
+	<meta charset="utf-8" />
+	<title>{% if title is defined %}{{ title }} - {% endif %}{{ siteName }}</title>
+	<link rel="home" href="{{ siteUrl }}" />
+  <link rel="icon" href="{{ url('assets/icon/law.png') }}" type="image/png" sizes="24x24">
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    {% includeCssFile siteUrl ~ "assets/css/bootstrap.min.css" %}
+    {% includeCssFile siteUrl ~ "assets/css/style.css" %}
+    {% includeJsFile siteUrl ~ "assets/js/jquery.min.js" %}
+    {% includeJsFile siteUrl ~ "assets/js/bootstrap.min.js" %}
+    {% includeJsFile siteUrl ~ "assets/js/popper.min.js" %}
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">    
+</head>
+
+  <body>
+      
+       {% include 'partials/_navbar.twig' %} 
+       
+       {% block content %}
+
+       {% endblock %}	
+    	
+       {% include 'partials/_footer.twig' %}
+
+    		
+  </body>
+</html>

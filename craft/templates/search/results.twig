@@ -1,0 +1,60 @@
+
+{% extends "_layout" %}
+
+{% block content %}
+
+	<br>
+
+	<div class="container">
+
+			<div class="row">
+				<div class="col">
+					<div class="card">
+
+						{# Multi-fields search results #}
+
+						<h4>Αποτελέσματα αναζήτησης:</h4>
+                    
+				    {% if craft.app.request.getParam('q') %}
+					    {% set searchQuery = craft.app.request.getParam('q') %}
+					    {% set queryEntries1 = craft.entries({
+							    section: 'appeals',
+							    appealer:'*' ~ searchQuery ~ '*',							   
+							}).ids() %}
+						{% set queryEntries2 = craft.entries({
+							    section: 'appeals',
+							    assigner:'*' ~ searchQuery ~ '*',							   
+							}).ids() %} 
+						{% set queryEntries3 = craft.entries({
+							    section: 'appeals',
+							    judgement:'*' ~ searchQuery ~ '*',							   
+							}).ids() %} 
+
+                        {% set queryEntries = queryEntries1|merge(queryEntries2) %}
+                        {% set queryEntries = queryEntries|merge(queryEntries3) %}
+
+					{% endif %}
+
+						{% if queryEntries|length %}
+						  <p>{{ queryEntries|length }} αποτελέσματα:</p>
+
+						  {% paginate craft.entries.id(queryEntries).limit(appealsettings.postspersearch) as pageinfo, entries %}
+						  
+						  <ul>
+						    {% for entry in entries %}
+						      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+						    {% endfor %}
+						  </ul>
+						{% else %}
+						  <p>Η αναζήτηση με τον όρο “{{ searchQuery }}” δεν επέστρεψε κανένα αποτέλεσμα.</p>
+						{% endif %}
+
+			      </div>
+               </div>
+            </div>
+
+    </div>
+
+{% include 'partials/_pagination' %}
+
+{% endblock %}

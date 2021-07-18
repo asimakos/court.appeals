@@ -1,0 +1,9 @@
+baseUrl: 'http://localhost/tribunal/'
+enabled: true
+handle: default
+hasUrls: true
+language: en-US
+name: 'Κατάλογος Προσφυγών'
+primary: true
+siteGroup: 1f583d24-db2d-4b8a-9243-752ada9e7a6f
+sortOrder: 1

@@ -1,0 +1,32 @@
+
+{% extends "_layout" %}
+
+{% paginate craft.entries.relatedTo(category).limit(appealsettings.postsperpage) as pageinfo, entries  %}
+
+{% block content %}
+
+	
+	{% if entries %}
+	    <br>
+		<div class="container-fluid">
+
+				{% for entry in entries %}
+		            
+		            <div class="row">
+						<div class="col">
+							<div class="card">
+		                        <h6> ΓΑΚ: {{entry.title}} &nbsp;&nbsp; ΕΣΗΔΗΣ - ΠΡΟΚΗΡΥΞΗ: {{entry.tender}}  </h6>
+		                        <p>  Προσφεύγων: {{entry.appealer | upper}} &nbsp; &nbsp;&nbsp; Αναθέτουσα αρχή: {{entry.assigner | upper}} &nbsp; &nbsp;&nbsp; </p>
+		                        <p> <a href="{{entry.url}}" class="btn btn-primary" role="button">Περισσότερα</a> </p>
+					        </div>
+					    </div>
+					</div>
+
+				{% endfor %}
+		</div>
+
+    {% endif %}
+
+	{% include 'partials/_pagination' %}
+
+{% endblock %}

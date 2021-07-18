@@ -1,0 +1,42 @@
+
+{% extends "_layout" %}
+
+
+{% block content %}
+
+	<br>
+		<div class="container-fluid">
+
+			<div class="row">
+				<div class="col">
+					<div class="card">
+
+						{% set tag = craft.tags.slug(tag).one() %}
+
+							{% if not tag %}
+							    {% exit 404 %}
+						    {% endif %}
+
+						<h4> Προσφυγές με αναθέτουσα αρχή {{tag.title}} </h4>
+
+						
+						{% set entries = craft.entries().relatedTo(tag).order('title').all() %}
+
+						{% if entries | length %}
+						    <ol>
+						        {% for entry in entries %}
+						            <li> {{ entry.getLink() }}</li>
+						        {% endfor %}
+						    </ol>
+						{% else %}
+						    <p>Δυστυχώς δεν υπάρχουν προσφυγές για την αναθέτουσα αρχή {{tag.title}}.</p>
+						{% endif %}
+                        
+				    </div>
+			    </div>
+			</div>
+
+        </div>
+
+
+{% endblock %}

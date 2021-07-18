@@ -1,0 +1,27 @@
+contentColumnType: text
+fieldGroup: 78fc08b7-81dd-47d8-873a-3600a2c65e38
+handle: description
+instructions: 'Παρακαλώ εισάγετε συνοπτική περιγραφή της δημόσιας σύμβασης και λοιπών στοιχείων'
+name: Description
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  cleanupHtml: true
+  columnType: text
+  configSelectionMode: choose
+  defaultTransform: ''
+  manualConfig: ''
+  purifierConfig: ''
+  purifyHtml: '1'
+  redactorConfig: ''
+  removeEmptyTags: '1'
+  removeInlineStyles: '1'
+  removeNbsp: '1'
+  showHtmlButtonForNonAdmins: ''
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  uiMode: enlarged
+translationKeyFormat: null
+translationMethod: none
+type: craft\redactor\Field

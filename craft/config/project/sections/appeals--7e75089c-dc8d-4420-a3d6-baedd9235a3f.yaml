@@ -1,0 +1,11 @@
+enableVersioning: true
+handle: appeals
+name: Appeals
+propagationMethod: all
+siteSettings:
+  d2ba9b23-daf5-48d5-ba73-71bf3fb163ba:
+    enabledByDefault: true
+    hasUrls: true
+    template: _content\appeal
+    uriFormat: 'appeals/{slug}'
+type: channel
